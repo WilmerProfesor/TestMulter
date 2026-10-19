@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hola Mundo</h1>
+    
+    <form action="http://localhost:3000/api/userFile" method="post" enctype="multipart/form-data">
+        <label for="id">ID:</label>
+        <input type="text" name="id" id="">
+        <label for="username">Nombre de usuario</label>
+        <input type="text" name="username" id="">
+        <label for="email">Correo electrónico</label>
+        <input type="email" name="email" id="">
+        <label for="rol">ROL:</label>
+        <input type="text" name="rol" id="">
+        <label for="avatar">Avatar:</label>
+        <input type="file" name="avatar" id="">
+        <input type="submit" value="Crear Usuario">
+    </form>
+</body>
+</html>
