@@ -21,11 +21,7 @@ const PORT = 3000
 app.use(express.urlencoded ({extended: true}));
 app.use(express.json());
 
-app.use("/",express.static(__dirname + '/public'));
-
-// app.get('/', (req, res) => {
-//   res.send('HOLA MUNDO!')
-// })
+app.use(express.static(__dirname+ '/../public'));
 
 app.get('/api/', (req, res) => {
   res.send('HOLA MUNDO!')
