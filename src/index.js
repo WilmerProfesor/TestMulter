@@ -1,5 +1,11 @@
 import express from 'express';
 import { uploader } from './util.js';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+// Alternativa para obtener __dirname en ES Modules
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const data=[
     {id:1,username: 'Wilmer', email: 'wilmer@example.com', rol: 'admin'},
@@ -15,7 +21,7 @@ const PORT = 3000
 app.use(express.urlencoded ({extended: true}));
 app.use(express.json());
 
-app.use("/",express.static('public'));
+app.use("/",express.static(__dirname + '/public'));
 
 // app.get('/', (req, res) => {
 //   res.send('HOLA MUNDO!')
